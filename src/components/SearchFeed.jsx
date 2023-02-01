@@ -16,7 +16,6 @@ const SearchFeed = () => {
   }, [searchTerm]);
 
   return (
-    // sx={{overflowY: 'auto', height:'90vh', flex:'2'}}
         <Box p={2} minHeight="95vh">
           <Typography variant="h4" fontWeight="bold" color='white' mb={3} ml={{ sm: "100px"}}>
               Search Results for: <span style={{color:'#F31503'}}>{searchTerm}</span>

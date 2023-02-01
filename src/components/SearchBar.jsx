@@ -16,7 +16,6 @@ const SearchBar = () => {
 
       setSearchTerm('');
     }
-
   }
 
   return (
