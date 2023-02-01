@@ -7,7 +7,7 @@ import {Sidebar, Videos} from "./";
 const Feed = () => {
 
   const [selectedCategory, setselectedCategory] = useState("New");
-  const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState(null);
 
   useEffect(() => {
      fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => setVideos(data.items))
@@ -27,7 +27,7 @@ const Feed = () => {
           </Typography>
         </Box>
 
-        <Box p={2} sx={{overflowY: 'auto', height:'90vh', flex:'2'}}>
+        <Box p={2} sx={{overflowY: 'auto', height:'90vh', flex:2}}>
           <Typography variant="h4" fontWeight="bold" mb={2} sx={{color:'white'}}>
               {selectedCategory} <span style={{color:'#F31503'}}>Videos</span>
           </Typography>
